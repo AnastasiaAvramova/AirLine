@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planeList xmlns:tns="http://www.example.org/NewXMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/NewXMLSchema NewXMLSchema.xsd ">
+  <airPlane height="3" id="Ap1" lenght="5" weight="2000" wingspan="3">
+    <cruisingSpeed>500</cruisingSpeed>
+    <flyingDistance>2000</flyingDistance>
+    <cargoCapacity>1000</cargoCapacity>
+    <seatsNumber>20</seatsNumber>
+    <fuelExpenditure>150</fuelExpenditure>
+    <bortNumber>123-A</bortNumber>
+    <airbagMotorPower>150</airbagMotorPower>
+    <airbagMotorName>AirMotor1</airbagMotorName>
+  </airPlane>
+    <airPlane height="3" id="Ap2" lenght="5" weight="2000" wingspan="3">
+    <cruisingSpeed>500</cruisingSpeed>
+    <flyingDistance>2000</flyingDistance>
+    <cargoCapacity>1000</cargoCapacity>
+    <seatsNumber>20</seatsNumber>
+    <fuelExpenditure>70</fuelExpenditure>
+    <bortNumber>124-A</bortNumber>
+    <airbagMotorPower>150</airbagMotorPower>
+    <airbagMotorName>AirMotor1</airbagMotorName>
+  </airPlane>
+  <hydroPlane height="3" id="Hp1" lenght="4" weight="1000" wingspan="2">
+    <cruisingSpeed>300</cruisingSpeed>
+    <flyingDistance>2000</flyingDistance>
+    <cargoCapacity>500</cargoCapacity>
+    <seatsNumber>10</seatsNumber>
+    <fuelExpenditure>50</fuelExpenditure>
+    <bortNumber>123-H</bortNumber>
+    <seaworthiness>2</seaworthiness>
+    <maxWaveHeight>5</maxWaveHeight>
+  </hydroPlane>
+  <hydroPlane height="3" id="Hp2" lenght="4" weight="1000" wingspan="2">
+    <cruisingSpeed>300</cruisingSpeed>
+    <flyingDistance>2000</flyingDistance>
+    <cargoCapacity>500</cargoCapacity>
+    <seatsNumber>10</seatsNumber>
+    <fuelExpenditure>50</fuelExpenditure>
+    <bortNumber>124-H</bortNumber>
+    <seaworthiness>2</seaworthiness>
+    <maxWaveHeight>5</maxWaveHeight>
+  </hydroPlane>
+  <bobberedPlane height="2" id="Bp1" lenght="4" weight="1000" wingspan="3">
+    <cruisingSpeed>200</cruisingSpeed>
+    <flyingDistance>2000</flyingDistance>
+    <cargoCapacity>300</cargoCapacity>
+    <seatsNumber>15</seatsNumber>
+    <fuelExpenditure>50</fuelExpenditure>
+    <bortNumber>123-B</bortNumber>
+    <seaworthiness>2</seaworthiness>
+    <maxWaveHeight>2</maxWaveHeight>
+    <bobbersNumber>2</bobbersNumber>
+  </bobberedPlane>
+    <bobberedPlane height="2" id="Bp2" lenght="4" weight="1000" wingspan="3">
+    <cruisingSpeed>200</cruisingSpeed>
+    <flyingDistance>2000</flyingDistance>
+    <cargoCapacity>300</cargoCapacity>
+    <seatsNumber>15</seatsNumber>
+    <fuelExpenditure>50</fuelExpenditure>
+    <bortNumber>124-B</bortNumber>
+    <seaworthiness>2</seaworthiness>
+    <maxWaveHeight>2</maxWaveHeight>
+    <bobbersNumber>3</bobbersNumber>
+  </bobberedPlane>
+  <skiedPlane height="3" id="Sp1" lenght="6" weight="2000" wingspan="3">
+    <cruisingSpeed>700</cruisingSpeed>
+    <flyingDistance>3000</flyingDistance>
+    <cargoCapacity>1000</cargoCapacity>
+    <seatsNumber>50</seatsNumber>
+    <fuelExpenditure>150</fuelExpenditure>
+    <bortNumber>123-S</bortNumber>
+    <skiLength>5</skiLength>
+    <skiWidth>1</skiWidth>
+  </skiedPlane>
+    <skiedPlane height="3" id="Sp2" lenght="6" weight="2000" wingspan="3">
+    <cruisingSpeed>700</cruisingSpeed>
+    <flyingDistance>3000</flyingDistance>
+    <cargoCapacity>1000</cargoCapacity>
+    <seatsNumber>50</seatsNumber>
+    <fuelExpenditure>150</fuelExpenditure>
+    <bortNumber>124-S</bortNumber>
+    <skiLength>5</skiLength>
+    <skiWidth>1</skiWidth>
+  </skiedPlane>
+  <wheeledPlane height="3" id="Wp1" lenght="6" weight="2000" wingspan="3">
+    <cruisingSpeed>700</cruisingSpeed>
+    <flyingDistance>3000</flyingDistance>
+    <cargoCapacity>1000</cargoCapacity>
+    <seatsNumber>50</seatsNumber>
+    <fuelExpenditure>150</fuelExpenditure>
+    <bortNumber>123-W</bortNumber>
+    <root>1</root>
+    <base>3</base>
+    <mainWheeelDiameter>2</mainWheeelDiameter>
+    <backWheeelDiameter>1</backWheeelDiameter>
+  </wheeledPlane>
+    <wheeledPlane height="3" id="Wp2" lenght="6" weight="2000" wingspan="3">
+    <cruisingSpeed>700</cruisingSpeed>
+    <flyingDistance>3000</flyingDistance>
+    <cargoCapacity>1000</cargoCapacity>
+    <seatsNumber>50</seatsNumber>
+    <fuelExpenditure>150</fuelExpenditure>
+    <bortNumber>124-W</bortNumber>
+    <root>1</root>
+    <base>3</base>
+    <mainWheeelDiameter>2</mainWheeelDiameter>
+    <backWheeelDiameter>1</backWheeelDiameter>
+  </wheeledPlane>
+</planeList>

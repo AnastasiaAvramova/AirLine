@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+	<element name="planeList" type="tns:PlaneList">
+	</element>
+	<complexType name="PlaneList">
+		<sequence>
+			<element name="airPlane" type="tns:AirbagPlane" minOccurs="1" maxOccurs="unbounded" />
+			<element name="hydroPlane" type="tns:HydroPlane" minOccurs="1" maxOccurs="unbounded" />
+			<element name="bobberedPlane" type="tns:BobberedPlane" minOccurs="1" maxOccurs="unbounded" />
+			<element name="skiedPlane" type="tns:SkiedChassisPlane" minOccurs="1" maxOccurs="unbounded" />
+			<element name="wheeledPlane" type="tns:WheeledChassisPlane" minOccurs="1" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	<complexType name="AbstractPlane" abstract="true">
+		<sequence>
+			<element name="cruisingSpeed" type="positiveInteger" />
+			<element name="flyingDistance" type="tns:FlyingDistanceType" />
+			<element name="cargoCapacity" type="positiveInteger" />
+			<element name="seatsNumber" type="positiveInteger" />
+			<element name="fuelExpenditure" type="positiveInteger" />
+			<element name="bortNumber" type="tns:BortNumber" />
+		</sequence>
+		<attribute name="id" type="ID" use="required" />
+		<attribute name="height" type="positiveInteger" use="required" />
+		<attribute name="weight" type="positiveInteger" use="required" />
+		<attribute name="lenght" type="positiveInteger" use="required" />
+		<attribute name="wingspan" type="positiveInteger" use="required" />
+	</complexType>
+	<complexType name="AirbagPlane">
+		<complexContent>
+			<extension base="tns:AbstractPlane">
+				<sequence>
+					<element name="airbagMotorPower" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+					<element name="airbagMotorName" type="string" minOccurs="1" maxOccurs="1"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="HydroPlane">
+		<complexContent>
+			<extension base="tns:AbstractPlane">
+				<sequence>
+					<element name="seaworthiness" type="tns:SeeWorthiness" minOccurs="1" maxOccurs="1"/>
+					<element name="maxWaveHeight" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BobberedPlane">
+		<complexContent>
+			<extension base="tns:HydroPlane">
+				<sequence>
+					<element name="bobbersNumber" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SkiedChassisPlane">
+		<complexContent>
+			<extension base="tns:AbstractPlane">
+				<sequence>
+					<element name="skiLength" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+					<element name="skiWidth" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="WheeledChassisPlane">
+		<complexContent>
+			<extension base="tns:AbstractPlane">
+				<sequence>
+					<element name="root" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+					<element name="base" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+					<element name="mainWheeelDiameter" type="tns:WheelDiameter" minOccurs="1" maxOccurs="1"/>
+					<element name="backWheeelDiameter" type="tns:WheelDiameter" minOccurs="1" maxOccurs="1"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<simpleType name="SeeWorthiness">
+		<restriction base="positiveInteger">
+			<enumeration value="1" />
+			<enumeration value="2" />
+			<enumeration value="3" />
+		</restriction>
+	</simpleType>
+	<simpleType name="WheelDiameter">
+		<restriction base="positiveInteger">
+			<minInclusive value="1" />
+			<maxInclusive value="5" />
+		</restriction>
+	</simpleType>
+	<simpleType name="BortNumber">
+		<restriction base="string">
+			<pattern value="[1-9](0-9)*'-'[A-Z]" />
+		</restriction>
+	</simpleType>
+	<simpleType name="BobersNumber">
+		<restriction base="positiveInteger">
+			<enumeration value="1" />
+			<enumeration value="2" />
+			<enumeration value="3" />
+		</restriction>
+	</simpleType>
+	<simpleType name="FlyingDistanceType">
+		<restriction base="positiveInteger">
+			<enumeration value="2000" />
+			<enumeration value="3000" />
+			<enumeration value="4000" />
+			<enumeration value="10000" />
+		</restriction>
+	</simpleType>
+</schema>
