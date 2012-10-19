@@ -43,7 +43,7 @@ public class AirCompany {
     }
     public void removePlane(String id)
     {
-        for (AbstractPlane plane : this.planeList) {
+        for1 (AbstractPlane plane : this.planeList) {
             if (plane.getId().equals(id)) {
                 this.planeList.remove(plane);
                 break;
